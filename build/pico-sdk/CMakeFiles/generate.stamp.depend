@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeASMInformation.cmake
+C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/Compiler/GNU-ASM.cmake
+C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/Compiler/GNU.cmake
+C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/Internal/CMakeASMLinkerInformation.cmake
+C:/Users/ASUS/.pico-sdk/sdk/2.2.0/CMakeLists.txt
+C:/Users/ASUS/.pico-sdk/sdk/2.2.0/pico_sdk_init.cmake
+C:/Users/ASUS/.pico-sdk/sdk/2.2.0/src/common/pico_base_headers/generate_config_header.cmake
+C:/Users/ASUS/.pico-sdk/sdk/2.2.0/src/common/pico_base_headers/include/pico/version.h.in
+C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/build/CMakeFiles/3.31.5/CMakeASMCompiler.cmake
