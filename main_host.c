@@ -172,22 +172,14 @@ static void process_kbd_report(uint8_t dev_addr, hid_keyboard_report_t const *re
     uint8_t keycode = report->keycode[i];
     if ( keycode )
     {
-      if ( find_key_in_report(&prev_report, keycode) )
-      {
-        // exist in previous report means the current key is holding
-      }else
-      {
-        // not existed in previous report means the current key is pressed
+      bool const is_shift = report->modifier & (KEYBOARD_MODIFIER_LEFTSHIFT | KEYBOARD_MODIFIER_RIGHTSHIFT);
+      uint8_t ch = keycode2ascii[keycode][is_shift ? 1 : 0];
 
-        bool const is_shift = report->modifier & (KEYBOARD_MODIFIER_LEFTSHIFT | KEYBOARD_MODIFIER_RIGHTSHIFT);
-        uint8_t ch = keycode2ascii[keycode][is_shift ? 1 : 0];
-
-        if (ch)
-        {
-          if (ch == '\n') tud_cdc_write("\r", 1);
-          tud_cdc_write(&ch, 1);
-          flush = true;
-        }
+      if (ch)
+      {
+        if (ch == '\n') tud_cdc_write("\r", 1);
+        tud_cdc_write(&ch, 1);
+        flush = true;
       }
     }
     // TODO example skips key released
