@@ -40,6 +40,7 @@
 #include "pio_usb.h"
 #include "tusb.h"
 #include "usb_descriptors.h"
+#include "converter.h"
 
 
 
@@ -162,10 +163,11 @@ static inline bool find_key_in_report(hid_keyboard_report_t const *report, uint8
 static void process_kbd_report(uint8_t dev_addr, hid_keyboard_report_t const *report)
 {
   (void) dev_addr;
-  static hid_keyboard_report_t prev_report = { 0, 0, {0} }; // previous report to check key released
   bool flush = false;
 
-  tud_hid_keyboard_report(REPORT_ID_KEYBOARD, report->modifier, (uint8_t*) report->keycode);
+  //tud_hid_keyboard_report(REPORT_ID_KEYBOARD, report->modifier, (uint8_t*) report->keycode);
+  hid_gamepad_report_t new_report = kbd_to_con(report);
+  tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, 0, 0, 0, 0, 0, new_report.buttons);
   
   for(uint8_t i=0; i<6; i++)
   {
@@ -186,8 +188,6 @@ static void process_kbd_report(uint8_t dev_addr, hid_keyboard_report_t const *re
   }
 
   if (flush) tud_cdc_write_flush();
-
-  prev_report = *report;
 }
 
 // send mouse report to usb device CDC
@@ -200,7 +200,9 @@ static void process_mouse_report(uint8_t dev_addr, hid_mouse_report_t const * re
   const uint backwardpin = 19;
   const uint middlepin = 20;
 
-  tud_hid_mouse_report(REPORT_ID_MOUSE, report->buttons, report->x, report->y, report->wheel, 0);
+  //tud_hid_mouse_report(REPORT_ID_MOUSE, report->buttons, report->x, report->y, report->wheel, 0);
+  hid_gamepad_report_t new_report = mouse_to_con(report);
+  tud_hid_gamepad_report(REPORT_ID_GAMEPAD, 0, 0, new_report.z, 0, new_report.rx, 0, 0, new_report.buttons);
 
   gpio_put(leftpin, !(report->buttons & MOUSE_BUTTON_LEFT));
   gpio_put(rightpin, !(report->buttons & MOUSE_BUTTON_RIGHT));

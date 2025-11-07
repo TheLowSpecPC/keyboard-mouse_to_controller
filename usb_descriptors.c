@@ -99,7 +99,9 @@ uint8_t const desc_hid_report[] =
   // Add keyboard report descriptor with its ID
   TUD_HID_REPORT_DESC_KEYBOARD( HID_REPORT_ID(REPORT_ID_KEYBOARD) ),
   // Add mouse report descriptor with its unique ID
-  TUD_HID_REPORT_DESC_MOUSE   ( HID_REPORT_ID(REPORT_ID_MOUSE)    )
+  TUD_HID_REPORT_DESC_MOUSE   ( HID_REPORT_ID(REPORT_ID_MOUSE)    ),
+  // Add gamepad report descriptor with its unique ID
+  TUD_HID_REPORT_DESC_GAMEPAD ( HID_REPORT_ID(REPORT_ID_GAMEPAD) )
 };
 
 
