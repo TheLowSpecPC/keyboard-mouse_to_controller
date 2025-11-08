@@ -30,7 +30,7 @@ hid_gamepad_report_t kbd_to_con(hid_keyboard_report_t const *report) {
 
     gamepad.buttons = check(HID_KEY_SPACE, report->keycode) ? gamepad.buttons | TU_BIT(0) : gamepad.buttons & ~TU_BIT(0); // A
     gamepad.buttons = check(HID_KEY_R, report->keycode) ? gamepad.buttons | TU_BIT(2) : gamepad.buttons & ~TU_BIT(2); // X
-    gamepad.buttons = check(HID_KEY_F, report->keycode) ? gamepad.buttons | TU_BIT(3) : gamepad.buttons & ~TU_BIT(3); // X
+    gamepad.buttons = check(HID_KEY_E, report->keycode) ? gamepad.buttons | TU_BIT(3) : gamepad.buttons & ~TU_BIT(3); // Y
 
     gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTCTRL ? gamepad.buttons | TU_BIT(1) : gamepad.buttons & ~TU_BIT(1); //B
     gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTSHIFT ? gamepad.buttons | TU_BIT(10) : gamepad.buttons & ~TU_BIT(10); //THUMB L
@@ -40,8 +40,25 @@ hid_gamepad_report_t kbd_to_con(hid_keyboard_report_t const *report) {
 
 hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
 
-    gamepad.z = report->x > 10 ? 127 : (report->x < -10 ? -127 : report->x);
-    gamepad.rx = report->y > 10 ? 127 : (report->y < -10 ? -127 : report->y);
+    int8_t deadzone = 10;
+    int8_t sen = 66;
+    // X axis
+    if(report->x > deadzone){
+        gamepad.z = report->x < sen ? sen : report->x;
+    }
+    else if (report->x < -deadzone){
+        gamepad.z = report->x > -sen ? -sen : report->x;
+    }
+    else gamepad.z = report->x > 0 ? (report->x) + 10 : (report->x) - 10;
+
+    // Y axis
+    if(report->y > deadzone){
+        gamepad.rx = report->y < sen ? sen : report->y;
+    }
+    else if (report->y < -deadzone){
+        gamepad.rx = report->y > -sen ? -sen : report->y;
+    }
+    else gamepad.rx = report->y > 0 ? (report->y) + 10 : (report->y) - 10;
 
     gamepad.buttons = report->buttons & MOUSE_BUTTON_LEFT ? gamepad.buttons | TU_BIT(7) : gamepad.buttons & ~TU_BIT(7); // RT
     gamepad.buttons = report->buttons & MOUSE_BUTTON_RIGHT ? gamepad.buttons | TU_BIT(6) : gamepad.buttons & ~TU_BIT(6); // LT
