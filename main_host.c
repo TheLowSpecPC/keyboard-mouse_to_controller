@@ -1,34 +1,3 @@
-/*
- * The MIT License (MIT)
- *
- * Copyright (c) 2019 Ha Thach (tinyusb.org)
- *                    sekigon-gonnoc
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- */
-
-// This example runs both host and device concurrently. The USB host receive
-// reports from HID device and print it out over USB Device CDC interface.
-// For TinyUSB roothub port0 is native usb controller, roothub port1 is
-// pico-pio-usb.
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -165,10 +134,6 @@ static void process_kbd_report(uint8_t dev_addr, hid_keyboard_report_t const *re
   (void) dev_addr;
   bool flush = false;
 
-  //tud_hid_keyboard_report(REPORT_ID_KEYBOARD, report->modifier, (uint8_t*) report->keycode);
-  //hid_gamepad_report_t new_report = kbd_to_con(report);
-  //tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
-  
   for(uint8_t i=0; i<6; i++)
   {
     uint8_t keycode = report->keycode[i];
@@ -199,10 +164,6 @@ static void process_mouse_report(uint8_t dev_addr, hid_mouse_report_t const * re
   const uint forwardpin = 18;
   const uint backwardpin = 19;
   const uint middlepin = 20;
-
-  //tud_hid_mouse_report(REPORT_ID_MOUSE, report->buttons, report->x, report->y, report->wheel, 0);
-  //hid_gamepad_report_t new_report = mouse_to_con(report);
-  //tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
 
   gpio_put(leftpin, !(report->buttons & MOUSE_BUTTON_LEFT));
   gpio_put(rightpin, !(report->buttons & MOUSE_BUTTON_RIGHT));
