@@ -45,13 +45,13 @@ hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
     int8_t y = report->y;
 
     // X axis
-    if(report->x > 0) gamepad.z = 194.4927 + (0.02418395 - 194.4927)/(1 + pow((x/64.94899), 0.957923));
-    else if(report->x < 0) gamepad.z = -(194.4927 + (0.02418395 - 194.4927)/(1 + pow((-1*x/64.94899), 0.957923)));
+    if(report->x > 0) gamepad.z = 137.6914 - 137.1577*exp(-0.02002247*x);
+    else if(report->x < 0) gamepad.z = -(137.6914 - 137.1577*exp(0.02002247*x));
     else gamepad.z = 0;
 
     // Y axis
-    if(report->y > 0) gamepad.rx = 194.4927 + (0.02418395 - 194.4927)/(1 + pow((y/64.94899), 0.957923));
-    else if(report->y < 0) gamepad.rx = -(194.4927 + (0.02418395 - 194.4927)/(1 + pow((-1*y/64.94899), 0.957923)));
+    if(report->y > 0) gamepad.rx = 137.6914 - 137.1577*exp(-0.02002247*y);
+    else if(report->y < 0) gamepad.rx = -(137.6914 - 137.1577*exp(0.02002247*y));
     else gamepad.rx = 0;
 
     gamepad.buttons = report->buttons & MOUSE_BUTTON_LEFT ? gamepad.buttons | TU_BIT(7) : gamepad.buttons & ~TU_BIT(7); // RT
