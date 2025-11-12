@@ -30,11 +30,17 @@ hid_gamepad_report_t kbd_to_con(hid_keyboard_report_t const *report) {
     gamepad.x = (a == d) ? 0 : (a ? -127 : 127);
 
     gamepad.buttons = check(HID_KEY_SPACE, report->keycode) ? gamepad.buttons | TU_BIT(0) : gamepad.buttons & ~TU_BIT(0); // A
+    gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTCTRL ? gamepad.buttons | TU_BIT(1) : gamepad.buttons & ~TU_BIT(1); //B
     gamepad.buttons = check(HID_KEY_R, report->keycode) ? gamepad.buttons | TU_BIT(2) : gamepad.buttons & ~TU_BIT(2); // X
     gamepad.buttons = check(HID_KEY_E, report->keycode) ? gamepad.buttons | TU_BIT(3) : gamepad.buttons & ~TU_BIT(3); // Y
-
-    gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTCTRL ? gamepad.buttons | TU_BIT(1) : gamepad.buttons & ~TU_BIT(1); //B
+    gamepad.buttons = check(HID_KEY_ESCAPE, report->keycode) ? gamepad.buttons | TU_BIT(9) : gamepad.buttons & ~TU_BIT(9); // Start
     gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTSHIFT ? gamepad.buttons | TU_BIT(10) : gamepad.buttons & ~TU_BIT(10); //THUMB L
+    gamepad.buttons = check(HID_KEY_V, report->keycode) ? gamepad.buttons | TU_BIT(11) : gamepad.buttons & ~TU_BIT(11); // Thumb R
+    gamepad.buttons = check(HID_KEY_1, report->keycode) ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
+    gamepad.buttons = check(HID_KEY_3, report->keycode) ? gamepad.buttons | TU_BIT(13) : gamepad.buttons & ~TU_BIT(13); // D-down
+    gamepad.buttons = check(HID_KEY_2, report->keycode) ? gamepad.buttons | TU_BIT(14) : gamepad.buttons & ~TU_BIT(14); // D-left
+    gamepad.buttons = check(HID_KEY_4, report->keycode) ? gamepad.buttons | TU_BIT(15) : gamepad.buttons & ~TU_BIT(15); // D-right
+    gamepad.buttons = check(HID_KEY_DELETE,  report->keycode) ? gamepad.buttons | TU_BIT(16) : gamepad.buttons & ~TU_BIT(16); // Home
 
     return gamepad;
 }
@@ -56,6 +62,9 @@ hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
 
     gamepad.buttons = report->buttons & MOUSE_BUTTON_LEFT ? gamepad.buttons | TU_BIT(7) : gamepad.buttons & ~TU_BIT(7); // RT
     gamepad.buttons = report->buttons & MOUSE_BUTTON_RIGHT ? gamepad.buttons | TU_BIT(6) : gamepad.buttons & ~TU_BIT(6); // LT
+    gamepad.buttons = report->buttons & MOUSE_BUTTON_MIDDLE ? gamepad.buttons | TU_BIT(4) : gamepad.buttons & ~TU_BIT(4); // LB
+    gamepad.buttons = report->buttons & MOUSE_BUTTON_FORWARD ? gamepad.buttons | TU_BIT(5) : gamepad.buttons & ~TU_BIT(5); // RB
+    gamepad.buttons = report->buttons & MOUSE_BUTTON_BACKWARD ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
 
     return gamepad;
 }
