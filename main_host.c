@@ -46,13 +46,6 @@ void core1_main() {
   };
   tuh_configure(1, TUH_CFGID_RPI_PIO_USB_CONFIGURATION, &pio_cfg);
 
-  // GPIO INITIALIZATION
-  const uint pins[] = {16, 17, 18, 19, 20};
-  for (int i = 0; i < sizeof(pins) / sizeof(pins[0]); ++i) {
-    gpio_init(pins[i]);
-    gpio_set_dir(pins[i], GPIO_OUT);
-  }
-
   // To run USB SOF interrupt in core1, init host stack for pio_usb (roothub
   // port1) on core1
   tuh_init(1);
@@ -158,19 +151,6 @@ static void process_kbd_report(uint8_t dev_addr, hid_keyboard_report_t const *re
 // send mouse report to usb device CDC
 static void process_mouse_report(uint8_t dev_addr, hid_mouse_report_t const * report)
 {
-  // Initialize Left and Right pins
-  const uint leftpin = 16;
-  const uint rightpin = 17;
-  const uint forwardpin = 18;
-  const uint backwardpin = 19;
-  const uint middlepin = 20;
-
-  gpio_put(leftpin, !(report->buttons & MOUSE_BUTTON_LEFT));
-  gpio_put(rightpin, !(report->buttons & MOUSE_BUTTON_RIGHT));
-  gpio_put(forwardpin, !(report->buttons & MOUSE_BUTTON_FORWARD));
-  gpio_put(backwardpin, !(report->buttons & MOUSE_BUTTON_BACKWARD));
-  gpio_put(middlepin, !(report->buttons & MOUSE_BUTTON_MIDDLE));
-
   //------------- button state  -------------//
   //uint8_t button_changed_mask = report->buttons ^ prev_report.buttons;
   char l = report->buttons & MOUSE_BUTTON_LEFT   ? 'L' : '-';
@@ -207,14 +187,14 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
   switch(itf_protocol)
   {
     case HID_ITF_PROTOCOL_KEYBOARD:
-      process_kbd_report(dev_addr, (hid_keyboard_report_t const*) report );
-      new_report = kbd_to_con((hid_keyboard_report_t const*) report);
+      //process_kbd_report(dev_addr, (hid_keyboard_report_t const*) report );
+      new_report = kbd_to_con((hid_keyboard_report_t const*) report); // Converts keyboard report to gamepad report
       tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
     break;
 
     case HID_ITF_PROTOCOL_MOUSE:
-      process_mouse_report(dev_addr, (hid_mouse_report_t const*) report );
-      new_report = mouse_to_con((hid_mouse_report_t const*) report);
+      //process_mouse_report(dev_addr, (hid_mouse_report_t const*) report );
+      new_report = mouse_to_con((hid_mouse_report_t const*) report); // Converts mouse report to gamepad report
       tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
     break;
 
