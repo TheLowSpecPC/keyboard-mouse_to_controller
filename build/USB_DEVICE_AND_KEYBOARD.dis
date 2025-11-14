@@ -1478,13 +1478,13 @@ Disassembly of section .text:
 10000c3e:	46c0      	nop			@ (mov r8, r8)
 10000c40:	20005350 	.word	0x20005350
 10000c44:	ffffefff 	.word	0xffffefff
-10000c48:	37572f3c 	.word	0x37572f3c
-10000c4c:	bf9480c5 	.word	0xbf9480c5
-10000c50:	e0ded289 	.word	0xe0ded289
-10000c54:	4061250b 	.word	0x4061250b
-10000c58:	f2e48e8a 	.word	0xf2e48e8a
-10000c5c:	4061361f 	.word	0x4061361f
-10000c60:	3f9480c5 	.word	0x3f9480c5
+10000c48:	b277e1e4 	.word	0xb277e1e4
+10000c4c:	bfa7521f 	.word	0xbfa7521f
+10000c50:	a9930be1 	.word	0xa9930be1
+10000c54:	40600b82 	.word	0x40600b82
+10000c58:	2b6ae7d5 	.word	0x2b6ae7d5
+10000c5c:	405fd3f6 	.word	0x405fd3f6
+10000c60:	3fa7521f 	.word	0x3fa7521f
 
 10000c64 <hcd_configure>:
 10000c64:	0013      	movs	r3, r2

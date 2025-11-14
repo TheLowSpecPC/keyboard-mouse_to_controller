@@ -56,13 +56,13 @@ hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
     int8_t y = report->y;
 
     // Right Stick X axis
-    if(report->x > 0) gamepad.z = 137.6914 - 137.1577*exp(-0.02002247*x);
-    else if(report->x < 0) gamepad.z = -(137.6914 - 137.1577*exp(0.02002247*x));
+    if(report->x > 0) gamepad.z = 127.3119 - 128.3597*exp(-0.04554843*x);
+    else if(report->x < 0) gamepad.z = -(127.3119 - 128.3597*exp(0.04554843*x));
     else gamepad.z = 0;
 
     // Right Stick Y axis
-    if(report->y > 0) gamepad.rx = 137.6914 - 137.1577*exp(-0.02002247*y);
-    else if(report->y < 0) gamepad.rx = -(137.6914 - 137.1577*exp(0.02002247*y));
+    if(report->y > 0) gamepad.rx = 127.3119 - 128.3597*exp(-0.04554843*y);
+    else if(report->y < 0) gamepad.rx = -(127.3119 - 128.3597*exp(0.04554843*y));
     else gamepad.rx = 0;
 
     // Buttons
