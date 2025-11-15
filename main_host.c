@@ -59,6 +59,7 @@ void core1_main() {
 
   while (true) {
     tuh_task(); // tinyusb host task
+    converter_task();
   }
 }
 
@@ -183,19 +184,16 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
   tud_cdc_write(raw_report_buf, strlen(raw_report_buf));
   tud_cdc_write_flush();*/
 
-  hid_gamepad_report_t new_report = {0, 0, 0, 0, 0, 0, 0, 0};
   switch(itf_protocol)
   {
     case HID_ITF_PROTOCOL_KEYBOARD:
       //process_kbd_report(dev_addr, (hid_keyboard_report_t const*) report );
-      new_report = kbd_to_con((hid_keyboard_report_t const*) report); // Converts keyboard report to gamepad report
-      tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
+      kbd_to_con((hid_keyboard_report_t const*) report); // Converts keyboard report to gamepad report
     break;
 
     case HID_ITF_PROTOCOL_MOUSE:
       //process_mouse_report(dev_addr, (hid_mouse_report_t const*) report );
-      new_report = mouse_to_con((hid_mouse_report_t const*) report); // Converts mouse report to gamepad report
-      tud_hid_gamepad_report(REPORT_ID_GAMEPAD, new_report.x, new_report.y, new_report.z, new_report.rz, new_report.rx, new_report.ry, new_report.hat, new_report.buttons);
+      mouse_to_con((hid_mouse_report_t const*) report); // Converts mouse report to gamepad report
     break;
 
     default: break;

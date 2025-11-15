@@ -7,6 +7,8 @@
 #include "pico/bootrom.h"
 
 #include "tusb.h"
+#include "usb_descriptors.h"
+#include "converter.h"
 
 #define TU_BIT(n) (1UL << (n))
 hid_gamepad_report_t gamepad = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -21,7 +23,7 @@ bool check(uint8_t c, uint8_t arr[]){
 }
 
 // convert hid keyboard report to hid gamepad report
-hid_gamepad_report_t kbd_to_con(hid_keyboard_report_t const *report) {
+void kbd_to_con(hid_keyboard_report_t const *report) {
 
     bool w = check(HID_KEY_W, report->keycode);
     bool s = check(HID_KEY_S, report->keycode);
@@ -45,12 +47,10 @@ hid_gamepad_report_t kbd_to_con(hid_keyboard_report_t const *report) {
     gamepad.buttons = check(HID_KEY_2, report->keycode) ? gamepad.buttons | TU_BIT(14) : gamepad.buttons & ~TU_BIT(14); // D-left
     gamepad.buttons = check(HID_KEY_4, report->keycode) ? gamepad.buttons | TU_BIT(15) : gamepad.buttons & ~TU_BIT(15); // D-right
     gamepad.buttons = check(HID_KEY_DELETE,  report->keycode) ? gamepad.buttons | TU_BIT(16) : gamepad.buttons & ~TU_BIT(16); // Home
-
-    return gamepad;
 }
 
 // convert hid mouse report to hid gamepad report
-hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
+void mouse_to_con(hid_mouse_report_t const *report) {
 
     int8_t x = report->x;
     int8_t y = report->y;
@@ -71,6 +71,9 @@ hid_gamepad_report_t mouse_to_con(hid_mouse_report_t const *report) {
     gamepad.buttons = report->buttons & MOUSE_BUTTON_MIDDLE ? gamepad.buttons | TU_BIT(4) : gamepad.buttons & ~TU_BIT(4); // LB
     gamepad.buttons = report->buttons & MOUSE_BUTTON_FORWARD ? gamepad.buttons | TU_BIT(5) : gamepad.buttons & ~TU_BIT(5); // RB
     gamepad.buttons = report->buttons & MOUSE_BUTTON_BACKWARD ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
+}
 
-    return gamepad;
+void converter_task(void) {
+    // --- Final gamepad state ---
+    tud_hid_gamepad_report(REPORT_ID_GAMEPAD, gamepad.x, gamepad.y, gamepad.z, gamepad.rz, gamepad.rx, gamepad.ry, gamepad.hat, gamepad.buttons);
 }
