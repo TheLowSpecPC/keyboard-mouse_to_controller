@@ -56,13 +56,13 @@ void mouse_to_con(hid_mouse_report_t const *report) {
     int8_t y = report->y;
 
     // Right Stick X axis
-    if(report->x > 0) gamepad.z = 127.3119 - 128.3597*exp(-0.04554843*x);
-    else if(report->x < 0) gamepad.z = -(127.3119 - 128.3597*exp(0.04554843*x));
+    if(x > 0) gamepad.z = 127.3119 - 128.3597*exp(-0.04554843*x);
+    else if(x < 0) gamepad.z = -(127.3119 - 128.3597*exp(0.04554843*x));
     else gamepad.z = 0;
 
     // Right Stick Y axis
-    if(report->y > 0) gamepad.rx = 127.3119 - 128.3597*exp(-0.04554843*y);
-    else if(report->y < 0) gamepad.rx = -(127.3119 - 128.3597*exp(0.04554843*y));
+    if(y > 0) gamepad.rx = 127.3119 - 128.3597*exp(-0.04554843*y);
+    else if(y < 0) gamepad.rx = -(127.3119 - 128.3597*exp(0.04554843*y));
     else gamepad.rx = 0;
 
     // Buttons
@@ -71,9 +71,4 @@ void mouse_to_con(hid_mouse_report_t const *report) {
     gamepad.buttons = report->buttons & MOUSE_BUTTON_MIDDLE ? gamepad.buttons | TU_BIT(4) : gamepad.buttons & ~TU_BIT(4); // LB
     gamepad.buttons = report->buttons & MOUSE_BUTTON_FORWARD ? gamepad.buttons | TU_BIT(5) : gamepad.buttons & ~TU_BIT(5); // RB
     gamepad.buttons = report->buttons & MOUSE_BUTTON_BACKWARD ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
-}
-
-void converter_task(void) {
-    // --- Final gamepad state ---
-    tud_hid_gamepad_report(REPORT_ID_GAMEPAD, gamepad.x, gamepad.y, gamepad.z, gamepad.rz, gamepad.rx, gamepad.ry, gamepad.hat, gamepad.buttons);
 }

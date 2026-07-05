@@ -1,6 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/Users/ASUS/.pico-sdk/tools/2.2.0/pioasm/pioasmConfig.cmake
-C:/Users/ASUS/.pico-sdk/tools/2.2.0/pioasm/pioasmConfigVersion.cmake
-C:/Users/ASUS/.pico-sdk/tools/2.2.0/pioasm/pioasmTargets-release.cmake
-C:/Users/ASUS/.pico-sdk/tools/2.2.0/pioasm/pioasmTargets.cmake
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico-PIO-USB/CMakeLists.txt

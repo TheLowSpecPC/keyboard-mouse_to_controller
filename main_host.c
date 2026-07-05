@@ -5,6 +5,7 @@
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 #include "pico/bootrom.h"
+#include "pico/time.h"
 
 #include "pio_usb.h"
 #include "tusb.h"
@@ -21,6 +22,8 @@
 
 static uint8_t const keycode2ascii[128][2] =  { HID_KEYCODE_TO_ASCII };
 
+absolute_time_t lastTime = 0;
+int8_t lastX, lastY = 0;
 
 /*------------- MAIN -------------*/
 
@@ -59,7 +62,24 @@ void core1_main() {
 
   while (true) {
     tuh_task(); // tinyusb host task
-    converter_task();
+
+    extern hid_gamepad_report_t gamepad;
+    absolute_time_t now = get_absolute_time();
+
+    if ((now - lastTime) >= 50000){ //50ms
+      lastTime = now; // Reset 
+
+      if(gamepad.z == lastX && gamepad.rx == lastY){
+        tud_cdc_write_str("Same values, skipping report\r\n");
+        gamepad.z = 0;
+        gamepad.rx = 0;
+      }
+      
+      lastX = gamepad.z;
+      lastY = gamepad.rx;
+    }
+
+    tud_hid_gamepad_report(REPORT_ID_GAMEPAD, gamepad.x, gamepad.y, gamepad.z, gamepad.rz, gamepad.rx, gamepad.ry, gamepad.hat, gamepad.buttons);
   }
 }
 
