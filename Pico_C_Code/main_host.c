@@ -5,11 +5,13 @@
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 #include "pico/bootrom.h"
+#include "hardware/watchdog.h"
 
 #include "pio_usb.h"
 #include "tusb.h"
 #include "usb_descriptors.h"
 #include "converter.h"
+#include "kvstore.h"
 
 
 
@@ -20,6 +22,10 @@
 
 
 static uint8_t const keycode2ascii[128][2] =  { HID_KEYCODE_TO_ASCII };
+
+static uint8_t rx_buffer[256];
+static uint32_t rx_index = 0;
+uint8_t ascii[36], modifier[36], mouse[36];
 
 /*------------- MAIN -------------*/
 
@@ -53,14 +59,76 @@ void core1_main() {
   // For example, let's use GPIO 21 and 22.
   const uint pin_dp_2 = 2; // D+ for 2nd port on GPIO 2 (D- will be GPIO 3)
 
+  stdio_init_all();
+
   // Add the second port
   pio_usb_host_add_port(pin_dp_2, PIO_USB_PINOUT_DPDM);
 
   init_converter(); // Initialize the converter (key mapping, etc.)
 
+  // Initialize the default LED pin (GP25) as an output
+  gpio_init(25);
+  gpio_set_dir(25, GPIO_OUT);
+  
   while (true) {
     tuh_task(); // tinyusb host task
     converter_task();
+
+    if (tud_cdc_available()) {
+      // Read new data into the buffer starting at our current index
+      uint32_t count = tud_cdc_read(&rx_buffer[rx_index], sizeof(rx_buffer) - rx_index);
+      rx_index += count;
+
+      // Process the packet ONLY when we have the full 110 bytes
+      // (36 ascii + 36 modifier + 36 mouse + 2 signature = 110)
+      while (rx_index >= 110) {
+        // Check for your end-of-data signature at the expected positions
+        if (rx_buffer[108] == 0xFF && rx_buffer[109] == 0xAA) {
+          gpio_put(25, 1); // Turn on LED on success
+
+          // 1. Unpack ASCII (Bytes 0 to 35)
+          for(int i = 0; i < 36; i++){ascii[i] = rx_buffer[i];}
+          
+          // 2. Unpack Modifiers (Bytes 36 to 71)
+          for(int i = 0; i < 36; i++){modifier[i] = rx_buffer[36 + i];}
+          
+          // 3. Unpack Mouse (Bytes 72 to 107)
+          for(int i = 0; i < 36; i++){mouse[i] = rx_buffer[72 + i];}
+
+          // Save to memory
+          kvs_set("ascii", ascii, sizeof(ascii));
+          kvs_set("modifier", modifier, sizeof(modifier));
+          kvs_set("mouse", mouse, sizeof(mouse));
+
+          // Send success message back to Python
+          char tempbuf[64];
+          int c = sprintf(tempbuf, "Success\n");
+          tud_cdc_write(tempbuf, c);
+          tud_cdc_write_flush();
+
+          sleep_ms(100); // Give time for the message to be sent before rebooting
+
+          // Reboot to apply changes
+          watchdog_enable(1, true);
+          while (1) {
+            __wfi();
+          }
+        } 
+        else {
+          // If we have 110 bytes but the signature doesn't match, we got misaligned garbage data.
+          // In a real-world scenario, you might search for 0xFF 0xAA and shift to resync, 
+          // but clearing the buffer is the easiest fallback to reset state.
+          rx_index = 0; 
+          break; 
+        }
+
+        // Shift any leftover bytes (if you somehow received >110 bytes at once) to the front
+        rx_index -= 110;
+        if (rx_index > 0) {
+          memmove(rx_buffer, &rx_buffer[110], rx_index);
+        }
+      }
+    }
   }
 }
 

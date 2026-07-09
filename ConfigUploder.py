@@ -3,7 +3,7 @@ from tkinter import ttk, messagebox
 import serial
 import serial.tools.list_ports
 import json
-import os
+import os, time
 import keycodes
 
 CONFIG_FILE = "controller_map.json"
@@ -245,8 +245,21 @@ class ControllerApp(tk.Tk):
         try:
             payload = self.byte_conversion() 
             payload = b''.join(payload)
-            print(f"Sending payload: {payload}")
+            #print(f"Sending payload: {payload}")
+
+            self.serial_conn.reset_input_buffer()
             self.serial_conn.write(payload)
+            self.serial_conn.flush()
+
+            while self.serial_conn.in_waiting > 0:
+                byte = self.serial_conn.read(1)
+                print(byte)
+
+            self.status_var.set(f"Status: Sent {len(payload)} bytes to device.")
+            self.toggle_connection()  # Disconnect after sending
+            time.sleep(1.5)  # Short delay before reconnecting
+            self.toggle_connection()  # Reconnect to refresh the connection
+
             self.status_var.set(f"Status: Sent {len(payload)} bytes to device.")
             
         except Exception as e:
@@ -275,7 +288,7 @@ class ControllerApp(tk.Tk):
             else:
                 mouse_bytes.append(keycodes.mouse['Unmapped'])
 
-        final_bytes = ascii_bytes + modifier_bytes + mouse_bytes
+        final_bytes = ascii_bytes + modifier_bytes + mouse_bytes + [b'\xff', b'\xaa']
         return final_bytes
 
 if __name__ == "__main__":

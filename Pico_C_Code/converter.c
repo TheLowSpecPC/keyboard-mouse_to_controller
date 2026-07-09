@@ -12,7 +12,7 @@
 #include "converter.h"
 #include "kvstore.h"
 
-void keyConfig(char final[36][2]);
+void keyConfig(uint8_t final[36][2]);
 
 #define TU_BIT(n) (1UL << (n))
 hid_gamepad_report_t gamepad = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -20,7 +20,7 @@ hid_gamepad_report_t gamepad = {0, 0, 0, 0, 0, 0, 0, 0};
 absolute_time_t lastTime = 0;
 int8_t lastX, lastY = 0;
 
-char Keys[36][2] = {0};
+uint8_t Keys[36][2] = {0};
 void init_converter(void) {
     keyConfig(Keys);
 }
@@ -72,6 +72,9 @@ void kbd_to_con(hid_keyboard_report_t const *report) {
     gamepad.buttons = check(HID_KEY_2, report->keycode) ? gamepad.buttons | TU_BIT(14) : gamepad.buttons & ~TU_BIT(14); // D-left
     gamepad.buttons = check(HID_KEY_4, report->keycode) ? gamepad.buttons | TU_BIT(15) : gamepad.buttons & ~TU_BIT(15); // D-right
     gamepad.buttons = check(HID_KEY_DELETE,  report->keycode) ? gamepad.buttons | TU_BIT(16) : gamepad.buttons & ~TU_BIT(16); // Home
+
+    tud_cdc_write(Keys, sizeof(Keys)); 
+    tud_cdc_write_flush();
 }
 
 // convert hid mouse report to hid gamepad report
@@ -123,8 +126,8 @@ void converter_task(){
     tud_hid_gamepad_report(REPORT_ID_GAMEPAD, gamepad.x, gamepad.y, gamepad.z, gamepad.rz, gamepad.rx, gamepad.ry, gamepad.hat, gamepad.buttons);
 }
 
-void keyConfig(char final[36][2]){
-    char ascii[36]={0}, modifier[36]={0}, mouse[36]={0};
+void keyConfig(uint8_t final[36][2]){
+    uint8_t ascii[36]={0}, modifier[36]={0}, mouse[36]={0};
     size_t ascii_size = sizeof(ascii), modifier_size = sizeof(modifier), mouse_size = sizeof(mouse);
 
     kvs_get("ascii", ascii, sizeof(ascii), &ascii_size);

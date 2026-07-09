@@ -33,6 +33,6 @@
     "B31": "Unmapped",
     "L Stick UP": "KEY_W",
     "L Stick DOWN": "KEY_S",
-    "L Stick LEFT": "KEY_A",
-    "L Stick RIGHT": "KEY_D"
+    "L Stick LEFT": "MOUSE_1",
+    "L Stick RIGHT": "MOUSE_3"
 }
