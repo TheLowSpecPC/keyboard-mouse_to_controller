@@ -11,7 +11,6 @@
 #include "tusb.h"
 #include "usb_descriptors.h"
 #include "converter.h"
-#include "kvstore.h"
 
 
 
@@ -96,15 +95,7 @@ void core1_main() {
           for(int i = 0; i < 36; i++){mouse[i] = rx_buffer[72 + i];}
 
           // Save to memory
-          kvs_set("ascii", ascii, sizeof(ascii));
-          kvs_set("modifier", modifier, sizeof(modifier));
-          kvs_set("mouse", mouse, sizeof(mouse));
-
-          // Send success message back to Python
-          char tempbuf[64];
-          int c = sprintf(tempbuf, "Success\n");
-          tud_cdc_write(tempbuf, c);
-          tud_cdc_write_flush();
+          saveConfig(ascii, modifier, mouse);
 
           sleep_ms(100); // Give time for the message to be sent before rebooting
 

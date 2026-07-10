@@ -22,7 +22,6 @@ project(USB_DEVICE_AND_KEYBOARD)
 pico_sdk_init()
 
 add_subdirectory("./Pico-PIO-USB" pico_pio_usb)
-add_subdirectory(pico-kvstore)
 
 set(target_name USB_DEVICE_AND_KEYBOARD)
 add_executable(${target_name})
@@ -49,6 +48,6 @@ target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB)
 # needed so tinyusb can find tusb_config.h
 target_include_directories(${target_name} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
-target_link_libraries(${target_name} PRIVATE pico_stdlib pico_pio_usb tinyusb_device tinyusb_host kvstore kvstore_default)
+target_link_libraries(${target_name} PRIVATE pico_stdlib pico_pio_usb tinyusb_device tinyusb_host hardware_flash)
 pico_add_extra_outputs(${target_name})
 

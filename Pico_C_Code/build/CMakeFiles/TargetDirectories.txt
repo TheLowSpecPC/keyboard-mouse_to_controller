@@ -204,11 +204,3 @@ C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pic
 C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico_pio_usb/CMakeFiles/pico_pio_usb_usb_rx_pio_h.dir
 C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico_pio_usb/CMakeFiles/edit_cache.dir
 C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico_pio_usb/CMakeFiles/rebuild_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/CMakeFiles/rebuild_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/lib/pico-vfs/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/lib/pico-vfs/CMakeFiles/rebuild_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/lib/pico-vfs/pico-sdk/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/lib/pico-vfs/pico-sdk/CMakeFiles/rebuild_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/pico-sdk/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/pico-sdk/CMakeFiles/rebuild_cache.dir

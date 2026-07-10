@@ -4,15 +4,21 @@
 #include <math.h>
 
 #include "pico/stdlib.h"
+#include "pico/multicore.h"
 #include "pico/bootrom.h"
 #include "pico/time.h"
+#include "hardware/flash.h"
+#include "hardware/sync.h"
 
 #include "tusb.h"
 #include "usb_descriptors.h"
 #include "converter.h"
-#include "kvstore.h"
 
 void keyConfig(uint8_t final[36][2]);
+
+// Calculate an offset at the end of the Pico's Flash memory
+// PICO_FLASH_SIZE_BYTES is typically 2MB (2 * 1024 * 1024)
+#define FLASH_TARGET_OFFSET (PICO_FLASH_SIZE_BYTES - FLASH_SECTOR_SIZE)
 
 #define TU_BIT(n) (1UL << (n))
 hid_gamepad_report_t gamepad = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -36,7 +42,7 @@ bool check(uint8_t c, uint8_t arr[]){
 
 // convert hid keyboard report to hid gamepad report
 void kbd_to_con(hid_keyboard_report_t const *report) {
-    /*for(int i = 0; i < 32; i++){
+    for(int i = 0; i < 32; i++){
         if(Keys[i][1] == 1){
             gamepad.buttons = check(Keys[i][0], report->keycode) ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
         }
@@ -48,33 +54,11 @@ void kbd_to_con(hid_keyboard_report_t const *report) {
     bool up = (Keys[32][1] == 1) ? check(Keys[32][0], report->keycode) : (Keys[32][1] == 2) ? report->modifier & Keys[32][0] : false;
     bool down = (Keys[33][1] == 1) ? check(Keys[33][0], report->keycode) : (Keys[33][1] == 2) ? report->modifier & Keys[33][0] : false;
     bool left = (Keys[34][1] == 1) ? check(Keys[34][0], report->keycode) : (Keys[34][1] == 2) ? report->modifier & Keys[34][0] : false;
-    bool right = (Keys[35][1] == 1) ? check(Keys[35][0], report->keycode) : (Keys[35][1] == 2) ? report->modifier & Keys[35][0] : false;*/
-
-    bool up = check(HID_KEY_W, report->keycode);
-    bool down = check(HID_KEY_S, report->keycode);
-    bool left = check(HID_KEY_A, report->keycode);
-    bool right = check(HID_KEY_D, report->keycode);
+    bool right = (Keys[35][1] == 1) ? check(Keys[35][0], report->keycode) : (Keys[35][1] == 2) ? report->modifier & Keys[35][0] : false;
 
     // Left Stick
     gamepad.y = (up == down) ? 0 : (up ? -127 : 127);
     gamepad.x = (left == right) ? 0 : (left ? -127 : 127);
-
-    // Buttons
-    gamepad.buttons = check(HID_KEY_SPACE, report->keycode) ? gamepad.buttons | TU_BIT(0) : gamepad.buttons & ~TU_BIT(0); // A
-    gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTCTRL ? gamepad.buttons | TU_BIT(1) : gamepad.buttons & ~TU_BIT(1); //B
-    gamepad.buttons = check(HID_KEY_R, report->keycode) ? gamepad.buttons | TU_BIT(2) : gamepad.buttons & ~TU_BIT(2); // X
-    gamepad.buttons = check(HID_KEY_E, report->keycode) ? gamepad.buttons | TU_BIT(3) : gamepad.buttons & ~TU_BIT(3); // Y
-    gamepad.buttons = check(HID_KEY_ESCAPE, report->keycode) ? gamepad.buttons | TU_BIT(9) : gamepad.buttons & ~TU_BIT(9); // Start
-    gamepad.buttons = report->modifier & KEYBOARD_MODIFIER_LEFTSHIFT ? gamepad.buttons | TU_BIT(10) : gamepad.buttons & ~TU_BIT(10); //Thumb L
-    gamepad.buttons = check(HID_KEY_V, report->keycode) ? gamepad.buttons | TU_BIT(11) : gamepad.buttons & ~TU_BIT(11); // Thumb R
-    gamepad.buttons = check(HID_KEY_1, report->keycode) ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
-    gamepad.buttons = check(HID_KEY_3, report->keycode) ? gamepad.buttons | TU_BIT(13) : gamepad.buttons & ~TU_BIT(13); // D-down
-    gamepad.buttons = check(HID_KEY_2, report->keycode) ? gamepad.buttons | TU_BIT(14) : gamepad.buttons & ~TU_BIT(14); // D-left
-    gamepad.buttons = check(HID_KEY_4, report->keycode) ? gamepad.buttons | TU_BIT(15) : gamepad.buttons & ~TU_BIT(15); // D-right
-    gamepad.buttons = check(HID_KEY_DELETE,  report->keycode) ? gamepad.buttons | TU_BIT(16) : gamepad.buttons & ~TU_BIT(16); // Home
-
-    tud_cdc_write(Keys, sizeof(Keys)); 
-    tud_cdc_write_flush();
 }
 
 // convert hid mouse report to hid gamepad report
@@ -94,17 +78,11 @@ void mouse_to_con(hid_mouse_report_t const *report) {
     else gamepad.rx = 0;
 
     // Buttons
-    gamepad.buttons = report->buttons & MOUSE_BUTTON_LEFT ? gamepad.buttons | TU_BIT(7) : gamepad.buttons & ~TU_BIT(7); // RT
-    gamepad.buttons = report->buttons & MOUSE_BUTTON_RIGHT ? gamepad.buttons | TU_BIT(6) : gamepad.buttons & ~TU_BIT(6); // LT
-    gamepad.buttons = report->buttons & MOUSE_BUTTON_MIDDLE ? gamepad.buttons | TU_BIT(4) : gamepad.buttons & ~TU_BIT(4); // LB
-    gamepad.buttons = report->buttons & MOUSE_BUTTON_FORWARD ? gamepad.buttons | TU_BIT(5) : gamepad.buttons & ~TU_BIT(5); // RB
-    gamepad.buttons = report->buttons & MOUSE_BUTTON_BACKWARD ? gamepad.buttons | TU_BIT(12) : gamepad.buttons & ~TU_BIT(12); // D-up
-
-    /*for(int i = 0; i < 32; i++){
+    for(int i = 0; i < 32; i++){
         if(Keys[i][1] == 3){
             gamepad.buttons = report->buttons & Keys[i][0] ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
         }
-    }*/
+    }
 
 }
 
@@ -130,9 +108,12 @@ void keyConfig(uint8_t final[36][2]){
     uint8_t ascii[36]={0}, modifier[36]={0}, mouse[36]={0};
     size_t ascii_size = sizeof(ascii), modifier_size = sizeof(modifier), mouse_size = sizeof(mouse);
 
-    kvs_get("ascii", ascii, sizeof(ascii), &ascii_size);
-    kvs_get("modifier", modifier, sizeof(modifier), &modifier_size);
-    kvs_get("mouse", mouse, sizeof(mouse), &mouse_size);
+    const uint8_t* flash_target_contents = (const uint8_t *) (XIP_BASE + FLASH_TARGET_OFFSET);
+
+    memcpy(ascii, flash_target_contents, 36);
+    memcpy(modifier, flash_target_contents + 36, 36);
+    memcpy(mouse, flash_target_contents + 72, 36);
+    tud_cdc_write(ascii, sizeof(ascii));
 
     for(int i=0; i<36; i++){
         if(ascii[i] != 0){
@@ -152,4 +133,26 @@ void keyConfig(uint8_t final[36][2]){
             final[i][1] = 0;
         }
     }
+}
+
+void saveConfig(uint8_t* ascii_arr, uint8_t* mod_arr, uint8_t* mouse_arr) {
+    // 1. Create a 256-byte buffer (minimum write size for Pico flash)
+    uint8_t flash_data[FLASH_PAGE_SIZE] = {0}; 
+    
+    // 2. Pack your arrays into the buffer
+    memcpy(flash_data, ascii_arr, 36);
+    memcpy(flash_data + 36, mod_arr, 36);
+    memcpy(flash_data + 72, mouse_arr, 36);
+
+    // 3. Multicore Safety: Pause Core 0 and disable interrupts
+    multicore_lockout_start_blocking(); 
+    uint32_t ints = save_and_disable_interrupts();
+
+    // 4. Perform the Flash Erase and Write
+    flash_range_erase(FLASH_TARGET_OFFSET, FLASH_SECTOR_SIZE);
+    flash_range_program(FLASH_TARGET_OFFSET, flash_data, FLASH_PAGE_SIZE);
+
+    // 5. Restore system execution
+    restore_interrupts(ints);
+    multicore_lockout_end_blocking();
 }

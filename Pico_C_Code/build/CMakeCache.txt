@@ -337,24 +337,6 @@ USB_DEVICE_AND_KEYBOARD_IS_TOP_LEVEL:STATIC=ON
 USB_DEVICE_AND_KEYBOARD_SOURCE_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code
 
 //Value Computed by CMake
-pico-kvstore_BINARY_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore
-
-//Value Computed by CMake
-pico-kvstore_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-pico-kvstore_SOURCE_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/pico-kvstore
-
-//Value Computed by CMake
-pico-vfs_BINARY_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-kvstore/lib/pico-vfs
-
-//Value Computed by CMake
-pico-vfs_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-pico-vfs_SOURCE_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/pico-kvstore/lib/pico-vfs
-
-//Value Computed by CMake
 pico_sdk_BINARY_DIR:STATIC=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/pico-sdk
 
 //Value Computed by CMake
@@ -487,7 +469,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=103
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=99
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -564,8 +546,6 @@ PICO_RP2350:INTERNAL=0
 PICO_SDK_TESTS_ENABLED:INTERNAL=
 PICO_TOOLCHAIN_PATH:INTERNAL=C:\Users\ASUS/.pico-sdk/toolchain/14_2_Rel1
 PICO_TOOLS_DIR:INTERNAL=C:/Users/ASUS/.pico-sdk/sdk/2.2.0/tools
-//PICO VFS directory
-PICO_VFS_PATH:INTERNAL=C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/pico-kvstore/lib/pico-vfs
 //Compiler reason failure
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure

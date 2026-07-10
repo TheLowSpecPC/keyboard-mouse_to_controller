@@ -24,6 +24,9 @@ int main(void) {
 
   sleep_ms(10);
 
+  // 1. Tell Core 0 that it is allowed to be paused by Core 1
+  multicore_lockout_victim_init();
+
   multicore_reset_core1();
   // all USB task run in core1
   multicore_launch_core1(core1_main);

@@ -10,11 +10,11 @@ CONFIG_FILE = "controller_map.json"
 
 # Default schema if no JSON exists. 
 DEFAULT_MAPPING = {
-    "A": "Unmapped", "B": "Unmapped", "X": "Unmapped", "Y": "Unmapped",
-    "LB": "Unmapped", "RB": "Unmapped", "LT": "Unmapped", "RT": "Unmapped",
-    "Select": "Unmapped", "Start": "Unmapped", "L Thumb": "Unmapped", "R Thumb": "Unmapped",
-    "D-UP": "Unmapped", "D-DOWN": "Unmapped", "D-LEFT": "Unmapped", "D-RIGHT": "Unmapped",
-    "Home": "Unmapped", "Center Pad": "Unmapped", "B18" : "Unmapped", "B19": "Unmapped", 
+    "A": "KEY_SPACE", "B": "KEY_CONTROL_L", "X": "KEY_R", "Y": "KEY_E",
+    "LB": "MOUSE_2", "RB": "MOUSE_5", "LT": "MOUSE_3", "RT": "MOUSE_1",
+    "Select": "Unmapped", "Start": "KEY_ESCAPE", "L Thumb": "KEY_SHIFT_L", "R Thumb": "KEY_V",
+    "D-UP": "KEY_1", "D-DOWN": "KEY_2", "D-LEFT": "KEY_3", "D-RIGHT": "KEY_4",
+    "Home": "KEY_DELETE", "Center Pad": "Unmapped", "B18" : "Unmapped", "B19": "Unmapped", 
     "B20": "Unmapped", "B21": "Unmapped","B22": "Unmapped", "B23": "Unmapped", 
     "B24": "Unmapped", "B25": "Unmapped", "B26": "Unmapped", "B27": "Unmapped", 
     "B28": "Unmapped", "B29": "Unmapped","B30": "Unmapped", "B31": "Unmapped", 
@@ -251,11 +251,6 @@ class ControllerApp(tk.Tk):
             self.serial_conn.write(payload)
             self.serial_conn.flush()
 
-            while self.serial_conn.in_waiting > 0:
-                byte = self.serial_conn.read(1)
-                print(byte)
-
-            self.status_var.set(f"Status: Sent {len(payload)} bytes to device.")
             self.toggle_connection()  # Disconnect after sending
             time.sleep(1.5)  # Short delay before reconnecting
             self.toggle_connection()  # Reconnect to refresh the connection
