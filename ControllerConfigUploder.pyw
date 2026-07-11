@@ -90,6 +90,8 @@ class ControllerApp(tk.Tk):
         super().__init__()
         self.title("UART Controller Configurator")
         self.geometry("620x550") # Slightly wider to accommodate scrollbar
+
+        self.iconbitmap("controller.ico")
         
         self.mapping = self.load_config()
         self.serial_conn = None
