@@ -216,7 +216,7 @@ class ControllerApp(tk.Tk):
         else:
             self.cb_ports.set("No Ports Found")
 
-    def toggle_connection(self):
+    def toggle_connection(self, check = 0):
         if self.serial_conn and self.serial_conn.is_open:
             self.serial_conn.close()
             self.serial_conn = None
@@ -235,8 +235,13 @@ class ControllerApp(tk.Tk):
                 self.btn_send.config(state=tk.NORMAL)
                 self.cb_ports.config(state=tk.DISABLED)
                 self.status_var.set(f"Status: Connected to {port}")
+                if check:
+                    return True
             except Exception as e:
-                messagebox.showerror("Connection Error", f"Failed to connect to {port}\n{e}")
+                if check:
+                    pass
+                else:
+                    messagebox.showerror("Connection Error", f"Failed to connect to {port}\n{e}")
 
     def send_configuration(self):
         if not self.serial_conn or not self.serial_conn.is_open:
@@ -252,8 +257,14 @@ class ControllerApp(tk.Tk):
             self.serial_conn.flush()
 
             self.toggle_connection()  # Disconnect after sending
-            time.sleep(1.5)  # Short delay before reconnecting
-            self.toggle_connection()  # Reconnect to refresh the connection
+            time.sleep(0.5)  # Allow time for the device to process the data
+            port_name = self.port_var.get()
+            for _ in range(1000):
+                ports = [tuple(p) for p in serial.tools.list_ports.comports()]
+                connected = any(port_name in port for port in ports)
+                if connected:
+                    if self.toggle_connection(1):
+                        break
 
             self.status_var.set(f"Status: Sent {len(payload)} bytes to device.")
             

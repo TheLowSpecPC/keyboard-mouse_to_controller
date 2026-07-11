@@ -58,8 +58,6 @@ void core1_main() {
   // For example, let's use GPIO 21 and 22.
   const uint pin_dp_2 = 2; // D+ for 2nd port on GPIO 2 (D- will be GPIO 3)
 
-  stdio_init_all();
-
   // Add the second port
   pio_usb_host_add_port(pin_dp_2, PIO_USB_PINOUT_DPDM);
 

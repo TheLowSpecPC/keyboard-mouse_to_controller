@@ -42,15 +42,6 @@ bool check(uint8_t c, uint8_t arr[]){
 
 // convert hid keyboard report to hid gamepad report
 void kbd_to_con(hid_keyboard_report_t const *report) {
-    for(int i = 0; i < 32; i++){
-        if(Keys[i][1] == 1){
-            gamepad.buttons = check(Keys[i][0], report->keycode) ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
-        }
-        else if(Keys[i][1] == 2){
-            gamepad.buttons = report->modifier & Keys[i][0] ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
-        }
-    }
-
     bool up = (Keys[32][1] == 1) ? check(Keys[32][0], report->keycode) : (Keys[32][1] == 2) ? report->modifier & Keys[32][0] : false;
     bool down = (Keys[33][1] == 1) ? check(Keys[33][0], report->keycode) : (Keys[33][1] == 2) ? report->modifier & Keys[33][0] : false;
     bool left = (Keys[34][1] == 1) ? check(Keys[34][0], report->keycode) : (Keys[34][1] == 2) ? report->modifier & Keys[34][0] : false;
@@ -59,6 +50,15 @@ void kbd_to_con(hid_keyboard_report_t const *report) {
     // Left Stick
     gamepad.y = (up == down) ? 0 : (up ? -127 : 127);
     gamepad.x = (left == right) ? 0 : (left ? -127 : 127);
+
+    for(int i = 0; i < 32; i++){
+        if(Keys[i][1] == 1){
+            gamepad.buttons = check(Keys[i][0], report->keycode) ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
+        }
+        else if(Keys[i][1] == 2){
+            gamepad.buttons = report->modifier & Keys[i][0] ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
+        }
+    }
 }
 
 // convert hid mouse report to hid gamepad report
@@ -113,7 +113,6 @@ void keyConfig(uint8_t final[36][2]){
     memcpy(ascii, flash_target_contents, 36);
     memcpy(modifier, flash_target_contents + 36, 36);
     memcpy(mouse, flash_target_contents + 72, 36);
-    tud_cdc_write(ascii, sizeof(ascii));
 
     for(int i=0; i<36; i++){
         if(ascii[i] != 0){

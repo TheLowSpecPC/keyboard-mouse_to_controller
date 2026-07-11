@@ -122,8 +122,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-bijlke"
-      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-bijlke"
+      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-ogpouf"
+      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-ogpouf"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -134,10 +134,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-bijlke'
+        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-ogpouf'
         
-        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_12b70
-        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_4ea50
+        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -145,8 +145,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12b70.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccXIT4DE.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4ea50.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccpHR2Ao.s
         GNU C17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -163,13 +163,13 @@ events:
          C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: c3ae4274e7df52e7e88f1bdbad8fa7fc
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccXIT4DE.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccpHR2Ao.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj -o cmTC_12b70.elf   && cd ."
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj -o cmTC_4ea50.elf   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe
         COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe
@@ -180,10 +180,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_12b70.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_12b70.elf.'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclXCN4J.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_12b70.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_4ea50.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_4ea50.elf.'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc1OkESt.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_4ea50.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj
         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00008000\x0d
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_12b70.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_12b70.elf.'\x0d
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_4ea50.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_4ea50.elf.'\x0d
         
       exitCode: 0
   -
@@ -216,10 +216,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-bijlke']
+        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-ogpouf']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_12b70]
-        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_4ea50]
+        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -227,8 +227,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12b70.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccXIT4DE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4ea50.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccpHR2Ao.s]
         ignore line: [GNU C17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -245,8 +245,8 @@ events:
         ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c3ae4274e7df52e7e88f1bdbad8fa7fc]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccXIT4DE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccpHR2Ao.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/]
@@ -258,8 +258,8 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj -o cmTC_12b70.elf   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj -o cmTC_4ea50.elf   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe]
@@ -278,17 +278,17 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_12b70.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_12b70.elf.']
-        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclXCN4J.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_12b70.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_4ea50.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_4ea50.elf.']
+        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc1OkESt.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_4ea50.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj]
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclXCN4J.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc1OkESt.res] ==> ignore
           arg [--sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_12b70.elf] ==> ignore
+          arg [cmTC_4ea50.elf] ==> ignore
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -297,10 +297,10 @@ events:
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_12b70.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_4ea50.dir/CMakeCCompilerABI.c.obj] ==> ignore
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_12b70.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_12b70.elf.'\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_4ea50.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_4ea50.elf.'\x0d]
         ignore line: []
         ignore line: []
         collapse library dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
@@ -325,8 +325,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-h4ex0w"
-      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-h4ex0w"
+      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-l0860y"
+      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-l0860y"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -338,10 +338,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-h4ex0w'
+        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-l0860y'
         
-        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_7aeb3
-        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_98baf
+        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -349,8 +349,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7aeb3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFN8FsU.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_98baf.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFr8HTC.s
         GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -373,13 +373,13 @@ events:
          C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: f57d57b028b5d08af5eae585a87c5279
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFN8FsU.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFr8HTC.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7aeb3.elf   && cd ."
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_98baf.elf   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe
@@ -390,10 +390,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_7aeb3.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_7aeb3.elf.'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc9eL83U.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_7aeb3.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_98baf.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_98baf.elf.'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclrlaFI.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_98baf.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj
         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00008000\x0d
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_7aeb3.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_7aeb3.elf.'\x0d
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_98baf.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_98baf.elf.'\x0d
         
       exitCode: 0
   -
@@ -432,10 +432,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-h4ex0w']
+        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-l0860y']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_7aeb3]
-        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_98baf]
+        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -443,8 +443,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7aeb3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFN8FsU.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_98baf.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFr8HTC.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -467,8 +467,8 @@ events:
         ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f57d57b028b5d08af5eae585a87c5279]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFN8FsU.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccFr8HTC.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/]
@@ -480,8 +480,8 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7aeb3.elf   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_98baf.elf   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe]
@@ -500,17 +500,17 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_7aeb3.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_7aeb3.elf.']
-        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc9eL83U.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_7aeb3.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_98baf.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_98baf.elf.']
+        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclrlaFI.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_98baf.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj]
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc9eL83U.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cclrlaFI.res] ==> ignore
           arg [--sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7aeb3.elf] ==> ignore
+          arg [cmTC_98baf.elf] ==> ignore
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -519,10 +519,10 @@ events:
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_7aeb3.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_98baf.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_7aeb3.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_7aeb3.elf.'\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_98baf.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_98baf.elf.'\x0d]
         ignore line: []
         ignore line: []
         collapse library dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
@@ -676,8 +676,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-9ftv41"
-      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-9ftv41"
+      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-at66rd"
+      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-at66rd"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -688,10 +688,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-9ftv41'
+        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-at66rd'
         
-        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_8dcc5
-        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_dd2fe
+        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -699,8 +699,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8dcc5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc8iG7vX.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_dd2fe.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc3qeL1X.s
         GNU C17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -717,13 +717,13 @@ events:
          C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: c3ae4274e7df52e7e88f1bdbad8fa7fc
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc8iG7vX.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc3qeL1X.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj -o cmTC_8dcc5.elf   && cd ."
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj -o cmTC_dd2fe.elf   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe
         COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe
@@ -734,10 +734,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8dcc5.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8dcc5.elf.'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc46Jlz6.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_8dcc5.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_dd2fe.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_dd2fe.elf.'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccPdrDz3.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_dd2fe.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj
         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00008000\x0d
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8dcc5.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8dcc5.elf.'\x0d
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_dd2fe.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_dd2fe.elf.'\x0d
         
       exitCode: 0
   -
@@ -770,10 +770,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-9ftv41']
+        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-at66rd']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_8dcc5]
-        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_dd2fe]
+        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -781,8 +781,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8dcc5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc8iG7vX.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_dd2fe.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc3qeL1X.s]
         ignore line: [GNU C17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -799,8 +799,8 @@ events:
         ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c3ae4274e7df52e7e88f1bdbad8fa7fc]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc8iG7vX.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc3qeL1X.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/]
@@ -812,8 +812,8 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj -o cmTC_8dcc5.elf   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj -o cmTC_dd2fe.elf   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe]
@@ -832,17 +832,17 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8dcc5.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8dcc5.elf.']
-        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc46Jlz6.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_8dcc5.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_dd2fe.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_dd2fe.elf.']
+        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccPdrDz3.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_dd2fe.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj]
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\cc46Jlz6.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccPdrDz3.res] ==> ignore
           arg [--sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_8dcc5.elf] ==> ignore
+          arg [cmTC_dd2fe.elf] ==> ignore
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -851,10 +851,10 @@ events:
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_8dcc5.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_dd2fe.dir/CMakeCCompilerABI.c.obj] ==> ignore
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8dcc5.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8dcc5.elf.'\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_dd2fe.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_dd2fe.elf.'\x0d]
         ignore line: []
         ignore line: []
         collapse library dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
@@ -879,8 +879,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-mo2ol5"
-      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-mo2ol5"
+      source: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-4p48o7"
+      binary: "C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-4p48o7"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -892,10 +892,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-mo2ol5'
+        Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-4p48o7'
         
-        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_8a36c
-        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_aea24
+        [1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -903,8 +903,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8a36c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccA92mle.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_aea24.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccV2D41f.s
         GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -927,13 +927,13 @@ events:
          C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: f57d57b028b5d08af5eae585a87c5279
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccA92mle.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccV2D41f.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8a36c.elf   && cd ."
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_aea24.elf   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe
@@ -944,10 +944,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/;C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8a36c.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8a36c.elf.'
-         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccTYKfIb.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_8a36c.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_aea24.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_aea24.elf.'
+         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccj1ri3j.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_aea24.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj
         C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 00008000\x0d
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8a36c.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8a36c.elf.'\x0d
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_aea24.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_aea24.elf.'\x0d
         
       exitCode: 0
   -
@@ -986,10 +986,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-mo2ol5']
+        ignore line: [Change Dir: 'C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/CMakeFiles/CMakeScratch/TryCompile-4p48o7']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_8a36c]
-        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Users/ASUS/.pico-sdk/ninja/v1.12.1/ninja.exe -v cmTC_aea24]
+        ignore line: [[1/2] C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -997,8 +997,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8a36c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccA92mle.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus.exe -quiet -v -imultilib thumb/v6-m/nofp -iprefix C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/ASUS/.pico-sdk/cmake/v3.31.5/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_aea24.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccV2D41f.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -1021,8 +1021,8 @@ events:
         ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f57d57b028b5d08af5eae585a87c5279]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/']
-        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccA92mle.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/']
+        ignore line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccV2D41f.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/]
@@ -1034,8 +1034,8 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8a36c.elf   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_aea24.elf   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\ASUS\\.pico-sdk\\toolchain\\14_2_Rel1\\bin\\arm-none-eabi-g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe]
@@ -1054,17 +1054,17 @@ events:
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8a36c.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8a36c.elf.']
-        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccTYKfIb.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_8a36c.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_aea24.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_aea24.elf.']
+        link line: [ C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe -plugin C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll -plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccj1ri3j.res --sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_aea24.elf -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj]
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccTYKfIb.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\ASUS\\AppData\\Local\\Temp\\ccj1ri3j.res] ==> ignore
           arg [--sysroot=C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_8a36c.elf] ==> ignore
+          arg [cmTC_aea24.elf] ==> ignore
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -1073,10 +1073,10 @@ events:
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-LC:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_8a36c.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_aea24.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
         ignore line: [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_8a36c.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_8a36c.elf.'\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_aea24.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_aea24.elf.'\x0d]
         ignore line: []
         ignore line: []
         collapse library dir [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [C:/Users/ASUS/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]

@@ -1,0 +1,4 @@
+ControllerConfigUploder.spec
+/.vscode
+*.pyc
+/__pycache__
