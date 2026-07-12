@@ -22,7 +22,7 @@
 
 static uint8_t const keycode2ascii[128][2] =  { HID_KEYCODE_TO_ASCII };
 
-#define BUFFER_SIZE 74
+#define BUFFER_SIZE 80
 static uint8_t rx_buffer[BUFFER_SIZE];
 static uint32_t rx_index = 0;
 

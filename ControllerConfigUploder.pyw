@@ -18,11 +18,12 @@ DEFAULT_MAPPING = {
     "B20": "Unmapped", "B21": "Unmapped","B22": "Unmapped", "B23": "Unmapped", 
     "B24": "Unmapped", "B25": "Unmapped", "B26": "Unmapped", "B27": "Unmapped", 
     "B28": "Unmapped", "B29": "Unmapped","B30": "Unmapped", "B31": "Unmapped", 
-    "L Stick UP": "KEY_W", "L Stick DOWN": "KEY_S", "L Stick LEFT": "KEY_A", "L Stick RIGHT": "KEY_D"
+    "L Stick UP": "KEY_W", "L Stick DOWN": "KEY_S", "L Stick LEFT": "KEY_A", "L Stick RIGHT": "KEY_D",
+    "Rapid_Fire": "MOUSE_1", "Rapid_Fire_Enable": "Unmapped", "Rapid_Button": 7, "CPS": 10
 }
 
 class MappingDialog(tk.Toplevel):
-    def __init__(self, parent, btn_name, current_val, save_callback):
+    def __init__(self, parent, btn_name, mapping, save_callback):
         super().__init__(parent)
         self.title(f"Map Button: {btn_name}")
         self.geometry("350x200")
@@ -33,14 +34,39 @@ class MappingDialog(tk.Toplevel):
         self.grab_set()
 
         self.btn_name = btn_name
-        self.new_val = current_val
+        self.mapping = mapping
+        self.new_val = self.mapping[btn_name]
         self.save_callback = save_callback
 
         # UI Elements
         ttk.Label(self, text=f"Mapping for {btn_name}", font=("Segoe UI", 12, "bold")).pack(pady=10)
-        self.lbl_display = ttk.Label(self, text=f"Current: {current_val}", font=("Segoe UI", 10))
+        self.lbl_display = ttk.Label(self, text=f"Current: {self.new_val}", font=("Segoe UI", 10))
         self.lbl_display.pack(pady=5)
         ttk.Label(self, text="Press any Key or Mouse Button...", foreground="gray").pack(pady=5)
+
+        if self.btn_name == "Rapid_Fire":
+            rapid_frame = ttk.Frame(self)
+            rapid_frame.pack(side=tk.TOP, fill=tk.X, pady=0, padx=10)
+
+            self.buttons = list(self.mapping.keys())[:-7]
+            self.button_var = tk.StringVar(value="LT")
+            self.button = ttk.Combobox(rapid_frame, textvariable=self.button_var, values=self.buttons)
+            self.button.set(self.buttons[self.mapping["Rapid_Button"]]) # Default placeholder
+            self.button.pack(side=tk.TOP, pady=0)
+
+            self.lbl_cps = ttk.Label(rapid_frame, text="CPS (Clicks Per Second):")
+            self.lbl_cps.pack(side=tk.LEFT, padx=30)
+
+            self.cps_var = tk.IntVar(value=self.mapping["CPS"])
+            self.cps = ttk.Spinbox(
+                rapid_frame,
+                from_=1,
+                to=20,
+                increment=1,
+                textvariable=self.cps_var,
+                width=10
+            )
+            self.cps.pack(side=tk.LEFT)
 
         # Action Buttons Frame
         btn_frame = ttk.Frame(self)
@@ -77,6 +103,9 @@ class MappingDialog(tk.Toplevel):
         self.lbl_display.config(text=f"New: {self.new_val}")
 
     def apply_save(self):
+        if self.btn_name == "Rapid_Fire":
+            self.save_callback("Rapid_Button", self.buttons.index(self.button_var.get()))
+            self.save_callback("CPS", self.cps_var.get())
         self.save_callback(self.btn_name, self.new_val)
         self.destroy()
 
@@ -88,7 +117,7 @@ class MappingDialog(tk.Toplevel):
 class ControllerApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("UART Controller Configurator")
+        self.title("Controller Config Uploader")
         self.geometry("620x550") # Slightly wider to accommodate scrollbar
 
         self.iconbitmap("controller.ico")
@@ -180,6 +209,8 @@ class ControllerApp(tk.Tk):
         row, col = 0, 0
 
         for btn_name, mapped_val in self.mapping.items():
+            if btn_name == "Rapid_Button":
+                break  # Stop rendering buttons
             cell = ttk.Frame(self.grid_frame, borderwidth=1, relief="solid")
             cell.grid(row=row, column=col, padx=5, pady=5, sticky="nsew")
             
@@ -201,11 +232,14 @@ class ControllerApp(tk.Tk):
             self.grid_frame.columnconfigure(i, weight=1)
 
     def open_mapper(self, btn_name):
-        MappingDialog(self, btn_name, self.mapping[btn_name], self.update_mapping)
+        MappingDialog(self, btn_name, self.mapping, self.update_mapping)
 
     def update_mapping(self, btn_name, new_val):
         self.mapping[btn_name] = new_val
-        self.button_widgets[btn_name].config(text=new_val)
+        try:
+            self.button_widgets[btn_name].config(text=new_val)
+        except KeyError:
+            pass
         self.save_config()
         self.status_var.set(f"Status: Saved {btn_name} -> {new_val}")
 
@@ -252,7 +286,7 @@ class ControllerApp(tk.Tk):
         try:
             payload = self.byte_conversion() 
             payload = b''.join(payload)
-            print(f"Sending payload: {payload}")
+            #print(f"Sending payload: {payload}")
 
             self.serial_conn.reset_input_buffer()
             self.serial_conn.write(payload)
@@ -289,6 +323,12 @@ class ControllerApp(tk.Tk):
             elif self.mapping[i] in keycodes.mouse:
                 final_bytes.append(keycodes.mouse[self.mapping[i]])
                 final_bytes.append(b'\x03')
+
+            elif i == "Rapid_Button":
+                final_bytes.append(self.mapping[i].to_bytes(1, byteorder='big'))
+
+            elif i == "CPS":
+                final_bytes.append(self.mapping[i].to_bytes(1, byteorder='big'))
 
             else:
                 final_bytes += [b'\x00', b'\x00']
