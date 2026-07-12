@@ -22,9 +22,9 @@
 
 static uint8_t const keycode2ascii[128][2] =  { HID_KEYCODE_TO_ASCII };
 
-static uint8_t rx_buffer[256];
+#define BUFFER_SIZE 74
+static uint8_t rx_buffer[BUFFER_SIZE];
 static uint32_t rx_index = 0;
-uint8_t ascii[36], modifier[36], mouse[36];
 
 /*------------- MAIN -------------*/
 
@@ -78,22 +78,17 @@ void core1_main() {
 
       // Process the packet ONLY when we have the full 110 bytes
       // (36 ascii + 36 modifier + 36 mouse + 2 signature = 110)
-      while (rx_index >= 110) {
+      while (rx_index >= BUFFER_SIZE) {
         // Check for your end-of-data signature at the expected positions
-        if (rx_buffer[108] == 0xFF && rx_buffer[109] == 0xAA) {
+        if (rx_buffer[0] == 0xFF && rx_buffer[1] == 0xAA) {
           gpio_put(25, 1); // Turn on LED on success
 
-          // 1. Unpack ASCII (Bytes 0 to 35)
-          for(int i = 0; i < 36; i++){ascii[i] = rx_buffer[i];}
-          
-          // 2. Unpack Modifiers (Bytes 36 to 71)
-          for(int i = 0; i < 36; i++){modifier[i] = rx_buffer[36 + i];}
-          
-          // 3. Unpack Mouse (Bytes 72 to 107)
-          for(int i = 0; i < 36; i++){mouse[i] = rx_buffer[72 + i];}
+          // Shift elements left by 2 positions
+          memmove(&rx_buffer[0], &rx_buffer[2], (BUFFER_SIZE - 2) * sizeof(uint8_t));
+          memset(&rx_buffer[BUFFER_SIZE - 2], 0, 2 * sizeof(uint8_t)); // Clear the last 2 bytes
 
           // Save to memory
-          saveConfig(ascii, modifier, mouse);
+          saveConfig(rx_buffer);
 
           sleep_ms(100); // Give time for the message to be sent before rebooting
 

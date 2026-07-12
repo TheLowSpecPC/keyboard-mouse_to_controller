@@ -1,5 +1,4 @@
-asciiToKeycode= {'Unmapped': b'\x00',
-                 'KEY_A': b'\x04', 
+asciiToKeycode= {'KEY_A': b'\x04', 
                  'KEY_B': b'\x05', 
                  'KEY_C': b'\x06', 
                  'KEY_D': b'\x07', 
@@ -131,8 +130,7 @@ asciiToKeycode= {'Unmapped': b'\x00',
                  'KEY_KEYPAD_COMMA': b'\x85', 
                  'KEY_KEYPAD_EQUAL_SIGN': b'\x86'}
 
-modifier = {'Unmapped': b'\x00', 
-            'KEY_CONTROL_L': b'\x01', 'KEY_SHIFT_L': b'\x02', 'KEY_ALT_L': b'\x04', 'KEY_GUI_L': b'\x08', 
+modifier = {'KEY_CONTROL_L': b'\x01', 'KEY_SHIFT_L': b'\x02', 'KEY_ALT_L': b'\x04', 'KEY_GUI_L': b'\x08', 
             'KEY_CONTROL_R': b'\x10', 'KEY_SHIFT_R': b'\x20', 'KEY_ALT_R': b'\x40', 'KEY_GUI_R': b'\x80'}
 
-mouse = {'Unmapped': b'\x00', 'MOUSE_1': b'\x01', 'MOUSE_2': b'\x04', 'MOUSE_3': b'\x02', 'MOUSE_4': b'\x08', 'MOUSE_5': b'\x10'}
+mouse = {'MOUSE_1': b'\x01', 'MOUSE_2': b'\x04', 'MOUSE_3': b'\x02', 'MOUSE_4': b'\x08', 'MOUSE_5': b'\x10'}

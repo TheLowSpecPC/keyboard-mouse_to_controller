@@ -59,6 +59,12 @@ void kbd_to_con(hid_keyboard_report_t const *report) {
             gamepad.buttons = report->modifier & Keys[i][0] ? gamepad.buttons | TU_BIT(i) : gamepad.buttons & ~TU_BIT(i);
         }
     }
+    for (int i = 0; i < 36; i++) {
+        // Write the first byte of the row
+        tud_cdc_write(&Keys[i][0], 1);
+        // Write the second byte of the row
+        tud_cdc_write(&Keys[i][1], 1);
+    }
 }
 
 // convert hid mouse report to hid gamepad report
@@ -105,43 +111,25 @@ void converter_task(){
 }
 
 void keyConfig(uint8_t final[36][2]){
-    uint8_t ascii[36]={0}, modifier[36]={0}, mouse[36]={0};
-    size_t ascii_size = sizeof(ascii), modifier_size = sizeof(modifier), mouse_size = sizeof(mouse);
+    uint8_t config[72]={0};
+    size_t config_size = sizeof(config);
 
     const uint8_t* flash_target_contents = (const uint8_t *) (XIP_BASE + FLASH_TARGET_OFFSET);
 
-    memcpy(ascii, flash_target_contents, 36);
-    memcpy(modifier, flash_target_contents + 36, 36);
-    memcpy(mouse, flash_target_contents + 72, 36);
+    memcpy(config, flash_target_contents, config_size);
 
-    for(int i=0; i<36; i++){
-        if(ascii[i] != 0){
-            final[i][0] = ascii[i];
-            final[i][1] = 1;
-        }
-        else if(modifier[i] != 0){
-            final[i][0] = modifier[i];
-            final[i][1] = 2;
-        }
-        else if(mouse[i] != 0){
-            final[i][0] = mouse[i];
-            final[i][1] = 3;
-        }
-        else{
-            final[i][0] = 0;
-            final[i][1] = 0;
-        }
+    for(int i = 0; i < config_size/2; i++){
+        final[i][0] = config[i*2];
+        final[i][1] = config[i*2 + 1];
     }
 }
 
-void saveConfig(uint8_t* ascii_arr, uint8_t* mod_arr, uint8_t* mouse_arr) {
+void saveConfig(uint8_t* config_arr) {
     // 1. Create a 256-byte buffer (minimum write size for Pico flash)
     uint8_t flash_data[FLASH_PAGE_SIZE] = {0}; 
     
     // 2. Pack your arrays into the buffer
-    memcpy(flash_data, ascii_arr, 36);
-    memcpy(flash_data + 36, mod_arr, 36);
-    memcpy(flash_data + 72, mouse_arr, 36);
+    memcpy(flash_data, config_arr, 72);
 
     // 3. Multicore Safety: Pause Core 0 and disable interrupts
     multicore_lockout_start_blocking(); 

@@ -13,7 +13,7 @@ DEFAULT_MAPPING = {
     "A": "KEY_SPACE", "B": "KEY_CONTROL_L", "X": "KEY_R", "Y": "KEY_E",
     "LB": "MOUSE_2", "RB": "MOUSE_5", "LT": "MOUSE_3", "RT": "MOUSE_1",
     "Select": "Unmapped", "Start": "KEY_ESCAPE", "L Thumb": "KEY_SHIFT_L", "R Thumb": "KEY_V",
-    "D-UP": "KEY_1", "D-DOWN": "KEY_2", "D-LEFT": "KEY_3", "D-RIGHT": "KEY_4",
+    "D-UP": "KEY_1", "D-DOWN": "KEY_3", "D-LEFT": "KEY_2", "D-RIGHT": "KEY_4",
     "Home": "KEY_DELETE", "Center Pad": "Unmapped", "B18" : "Unmapped", "B19": "Unmapped", 
     "B20": "Unmapped", "B21": "Unmapped","B22": "Unmapped", "B23": "Unmapped", 
     "B24": "Unmapped", "B25": "Unmapped", "B26": "Unmapped", "B27": "Unmapped", 
@@ -252,7 +252,7 @@ class ControllerApp(tk.Tk):
         try:
             payload = self.byte_conversion() 
             payload = b''.join(payload)
-            #print(f"Sending payload: {payload}")
+            print(f"Sending payload: {payload}")
 
             self.serial_conn.reset_input_buffer()
             self.serial_conn.write(payload)
@@ -275,28 +275,24 @@ class ControllerApp(tk.Tk):
             messagebox.showerror("Transmission Error", str(e))
 
     def byte_conversion(self):
-        ascii_bytes = []
-        modifier_bytes = []
-        mouse_bytes = []
-        final_bytes = []
+        final_bytes = [b'\xff', b'\xaa']
 
         for i in self.mapping:
             if self.mapping[i] in keycodes.asciiToKeycode:
-                ascii_bytes.append(keycodes.asciiToKeycode[self.mapping[i]])
-            else:
-                ascii_bytes.append(keycodes.asciiToKeycode['Unmapped'])
+                final_bytes.append(keycodes.asciiToKeycode[self.mapping[i]])
+                final_bytes.append(b'\x01')
 
-            if self.mapping[i] in keycodes.modifier:
-                modifier_bytes.append(keycodes.modifier[self.mapping[i]])
-            else:
-                modifier_bytes.append(keycodes.modifier['Unmapped'])
+            elif self.mapping[i] in keycodes.modifier:
+                final_bytes.append(keycodes.modifier[self.mapping[i]])
+                final_bytes.append(b'\x02')
                 
-            if self.mapping[i] in keycodes.mouse:
-                mouse_bytes.append(keycodes.mouse[self.mapping[i]])
-            else:
-                mouse_bytes.append(keycodes.mouse['Unmapped'])
+            elif self.mapping[i] in keycodes.mouse:
+                final_bytes.append(keycodes.mouse[self.mapping[i]])
+                final_bytes.append(b'\x03')
 
-        final_bytes = ascii_bytes + modifier_bytes + mouse_bytes + [b'\xff', b'\xaa']
+            else:
+                final_bytes += [b'\x00', b'\x00']
+
         return final_bytes
 
 if __name__ == "__main__":
