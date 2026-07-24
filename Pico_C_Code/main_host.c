@@ -76,8 +76,6 @@ void core1_main() {
       uint32_t count = tud_cdc_read(&rx_buffer[rx_index], sizeof(rx_buffer) - rx_index);
       rx_index += count;
 
-      // Process the packet ONLY when we have the full 110 bytes
-      // (36 ascii + 36 modifier + 36 mouse + 2 signature = 110)
       while (rx_index >= BUFFER_SIZE) {
         // Check for your end-of-data signature at the expected positions
         if (rx_buffer[0] == 0xFF && rx_buffer[1] == 0xAA) {
@@ -99,17 +97,15 @@ void core1_main() {
           }
         } 
         else {
-          // If we have 110 bytes but the signature doesn't match, we got misaligned garbage data.
           // In a real-world scenario, you might search for 0xFF 0xAA and shift to resync, 
           // but clearing the buffer is the easiest fallback to reset state.
           rx_index = 0; 
           break; 
         }
 
-        // Shift any leftover bytes (if you somehow received >110 bytes at once) to the front
-        rx_index -= 110;
+        rx_index -= BUFFER_SIZE;
         if (rx_index > 0) {
-          memmove(rx_buffer, &rx_buffer[110], rx_index);
+          memmove(rx_buffer, &rx_buffer[BUFFER_SIZE], rx_index);
         }
       }
     }

@@ -37,23 +37,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  16 .comment      00000045  00000000  00000000  000124a8  2**0
                   CONTENTS, READONLY
- 17 .debug_info   00053e70  00000000  00000000  000124ed  2**0
+ 17 .debug_info   00053e6e  00000000  00000000  000124ed  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_abbrev 0000bf6e  00000000  00000000  0006635d  2**0
+ 18 .debug_abbrev 0000bf56  00000000  00000000  0006635b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_loclists 00033979  00000000  00000000  000722cb  2**0
+ 19 .debug_loclists 00033979  00000000  00000000  000722b1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_aranges 00001e60  00000000  00000000  000a5c48  2**3
+ 20 .debug_aranges 00001e60  00000000  00000000  000a5c30  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_rnglists 00007a8f  00000000  00000000  000a7aa8  2**0
+ 21 .debug_rnglists 00007a8f  00000000  00000000  000a7a90  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line   00039dee  00000000  00000000  000af537  2**0
+ 22 .debug_line   00039df4  00000000  00000000  000af51f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_str    0000dca6  00000000  00000000  000e9325  2**0
+ 23 .debug_str    0000dca6  00000000  00000000  000e9313  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_frame  00004e88  00000000  00000000  000f6fcc  2**2
+ 24 .debug_frame  00004e88  00000000  00000000  000f6fbc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_line_str 0000037b  00000000  00000000  000fbe54  2**0
+ 25 .debug_line_str 0000037b  00000000  00000000  000fbe44  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 C:/Users/ASUS/PycharmProjects/keyboard-mouse_to_controller/Pico_C_Code/build/USB_DEVICE_AND_KEYBOARD.elf:     file format elf32-littlearm
